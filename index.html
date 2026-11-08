@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Start your next chapter with the Northstar student registration portal.">
+  <title>Student registration · Northstar</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="index.html" aria-label="Northstar home"><span class="brand-icon">✳</span> northstar<span class="brand-dot">.</span></a><span class="portal-label">STUDENT PORTAL <span class="status-dot"></span></span></header>
+  <main class="layout">
+    <aside class="intro">
+      <div class="eyebrow"><span></span> YOUR NEXT CHAPTER</div>
+      <h1>Big ideas.<br>New beginnings.<br><em>Your future.</em></h1>
+      <p class="intro-copy">A world of possibility starts with one small step. Make yours here.</p>
+      <div class="art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orb"></div><span class="spark spark-one">✳</span><span class="spark spark-two">+</span><div class="art-label">A little curiosity.<br>A whole lot of potential. <span>↗</span></div></div>
+      <div class="intro-footer"><span class="mini-star">✳</span><p>Built for curious minds.<br><strong>Made for what comes next.</strong></p></div>
+    </aside>
+    <section class="registration" aria-labelledby="form-title">
+      <div class="form-top"><span class="pill">ADMISSIONS OPEN</span><span class="step-caption" id="step-caption">Step 1 of 3</span></div>
+      <h2 id="form-title">Let’s get you started.</h2>
+      <p class="subtitle">Tell us a little about yourself. Your next chapter awaits.</p>
+      <ol class="steps" aria-label="Registration progress"><li class="active" aria-current="step"><span>1</span> Personal</li><li><span>2</span> Academic</li><li><span>3</span> Review</li></ol>
+      <form id="registration-form">
+        <fieldset data-step="0"><legend>Personal details</legend><p class="section-note">The basics, so we can get to know you. <span>* Required</span></p>
+          <div class="field-grid"><div class="field"><label for="firstName">First name <b>*</b></label><input id="firstName" name="firstName" autocomplete="given-name" placeholder="e.g. Alex" maxlength="60" required></div><div class="field"><label for="lastName">Last name <b>*</b></label><input id="lastName" name="lastName" autocomplete="family-name" placeholder="e.g. Morgan" maxlength="60" required></div></div>
+          <div class="field"><label for="email">Email address <b>*</b></label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="150" required><small>We’ll use this as your contact email.</small></div>
+          <div class="field-grid"><div class="field"><label for="phone">Phone number <b>*</b></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+264 81 123 4567" maxlength="25" required></div><div class="field"><label for="birthDate">Date of birth <b>*</b></label><input id="birthDate" name="birthDate" type="date" autocomplete="bday" required></div></div>
+          <div class="field"><label for="address">Home address <b>*</b></label><input id="address" name="address" autocomplete="street-address" placeholder="Street, city, country" maxlength="250" required></div>
+        </fieldset>
+        <fieldset data-step="1" hidden><legend>Academic interests</legend><p class="section-note">Find the path that feels like you. <span>* Required</span></p>
+          <div class="field"><label for="program">Preferred program <b>*</b></label><select id="program" name="program" required><option value="">Choose your program</option><option>Computer Science</option><option>Business Administration</option><option>Engineering</option><option>Design & Creative Arts</option><option>Health Sciences</option><option>Education</option></select></div>
+          <div class="field-grid"><div class="field"><label for="qualification">Highest qualification <b>*</b></label><select id="qualification" name="qualification" required><option value="">Select qualification</option><option>Secondary school</option><option>Certificate</option><option>Diploma</option><option>Bachelor’s degree</option><option>Postgraduate degree</option></select></div><div class="field"><label for="studyMode">Study mode <b>*</b></label><select id="studyMode" name="studyMode" required><option value="">Select study mode</option><option>Full-time</option><option>Part-time</option><option>Online</option></select></div></div>
+          <div class="field"><label for="school">Previous school or institution <b>*</b></label><input id="school" name="school" placeholder="Your most recent institution" maxlength="160" required></div>
+          <div class="field"><label for="notes">Anything else you’d like us to know? <span class="optional">(optional)</span></label><textarea id="notes" name="notes" rows="4" maxlength="1000" placeholder="Your interests, goals, or accessibility needs…"></textarea></div>
+        </fieldset>
+        <fieldset data-step="2" hidden><legend>One last look</legend><p class="section-note">Check your details before completing registration.</p><dl id="review" class="review"></dl><label class="checkbox"><input type="checkbox" id="consent" required><span>I confirm that these details are accurate and understand this demo creates a local receipt only. <b>*</b></span></label></fieldset>
+        <p id="form-error" class="error" role="alert" hidden></p>
+        <div class="actions"><button type="button" id="back" class="button secondary" hidden>← Back</button><button type="submit" id="next" class="button primary">Continue to academic details <span>→</span></button></div>
+        <p class="privacy"><span aria-hidden="true">◇</span> Your information stays in this tab until you download it.</p>
+      </form>
+      <section id="success" class="success" hidden aria-live="polite"><span class="success-icon">✓</span><h3>You’re ready for your next chapter.</h3><p>Your registration receipt is ready. This demonstration does not send an application to an institution.</p><p id="reference"></p><button id="download" class="button primary" type="button">Download receipt ↓</button><button id="restart" class="button secondary" type="button">Start a new registration</button></section>
+      <footer class="form-footer"><span>A little time now. A brighter tomorrow.</span><span>✳ NORTHSTAR</span></footer>
+    </section>
+  </main>
+  <footer class="page-footer"><span>© <span id="year"></span> Northstar · Student registration demo</span><span>THE FUTURE STARTS WITH YOU ↗</span></footer>
+</body>
+</html>
